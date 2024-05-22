@@ -355,8 +355,8 @@ export default {
       gsap.utils.toArray(".section").forEach((section) => {
         ScrollTrigger.create({
           trigger: section,
-          start: "top 40%",
-          end: "bottom 90%",
+          start: "top 75%",
+          end: "bottom 10%",
           markers: true,
           onEnter: () => this.animateMenu(section.id),
           onEnterBack: () => this.animateMenu(section.id),
