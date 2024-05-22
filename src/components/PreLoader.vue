@@ -357,7 +357,7 @@ export default {
           trigger: section,
           start: "top 75%",
           end: "bottom 10%",
-          markers: true,
+          markers: false,
           onEnter: () => this.animateMenu(section.id),
           onEnterBack: () => this.animateMenu(section.id),
         });
