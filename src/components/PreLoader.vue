@@ -58,7 +58,7 @@
       <div class="containerr h-[50vh]">
       </div>
       <div class="containerr-2">
-        <div class="flex flex-col justify-center items-center gap-[60px] section">
+        <div class="flex flex-col justify-center items-center gap-[60px]">
           <div class="section flex flex-col justify-center items-center gap-20" id="home">
             <div> 
               <img src="@/assets/images/appmock.png" />
@@ -352,16 +352,18 @@ export default {
         pinSpacing: false
       });
 
+    this.$nextTick(() => {
       gsap.utils.toArray(".section").forEach((section) => {
         ScrollTrigger.create({
           trigger: section,
-          start: "top 75%",
-          end: "bottom 10%",
-          markers: false,
+          start: "top top", // Start when the top of the section is 20% down from its top
+          end: "bottom bottom", // End when the bottom of the section is 20% up from its bottom
+          markers: true,
           onEnter: () => this.animateMenu(section.id),
           onEnterBack: () => this.animateMenu(section.id),
         });
       });
+    })
     window.addEventListener('scroll', this.handleScroll);
     Promise.all([
       ]
@@ -381,7 +383,7 @@ export default {
 .logoo {
   position: fixed;
   top:39px;
-  width: 20%;
+  width: 15%;
   height: auto;
   left:50%;
   transform:translateX(-50%);
