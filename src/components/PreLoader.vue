@@ -339,7 +339,7 @@ export default {
       ScrollTrigger.create({
         animation:gsap.from(".logoo", {
           y:"40vh",
-          scale:3,
+          scale:4,
           yPercent:-40
         }),
         scrub:true,
@@ -358,7 +358,7 @@ export default {
           trigger: section,
           start: "top top", // Start when the top of the section is 20% down from its top
           end: "bottom bottom", // End when the bottom of the section is 20% up from its bottom
-          markers: true,
+          markers: false,
           onEnter: () => this.animateMenu(section.id),
           onEnterBack: () => this.animateMenu(section.id),
         });
