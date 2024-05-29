@@ -1,31 +1,31 @@
 <template>
-    <div class="flex w-5/6 justify-between gap-20 mx-auto"> 
+    <div class="flex lg:w-5/6 w-full justify-between lg:gap-20 gap-10 mx-auto"> 
         <div class="flex flex-col items-center relative justify-center w-1/4 ki">
-            <span class="text-[20px] absolute top-0">days</span>
+            <span class="lg:text-[20px] text-[17px] absolute lg:top-0 -top-4">days</span>
             <div class="flex">
-                <h1 class="text-[150px] text-semi  text-center mx-auto">{{days}}</h1>
-                <!-- <h1 class="text-[150px]">:</h1> -->
+                <h1 class="lg:text-[150px] text-[60px] text-semi  text-center mx-auto">{{days}}</h1>
+                <!-- <h1 class="lg:text-[150px] text-[80px]">:</h1> -->
             </div>
         </div>
         <div class="flex flex-col items-center relative justify-center w-1/4 ki">
-            <span class="text-[20px] absolute top-0">hours</span>
+            <span class="lg:text-[20px] text-[17px] absolute lg:top-0 -top-4">hours</span>
             <div class="flex">
-                <h1 class="text-[150px] text-semi  text-center mx-auto">{{hours}}</h1>
-                <!-- <h1 class="text-[150px]">:</h1> -->
+                <h1 class="lg:text-[150px] text-[60px] text-semi  text-center mx-auto">{{hours}}</h1>
+                <!-- <h1 class="lg:text-[150px] text-[80px]">:</h1> -->
             </div>
         </div>
         <div class="flex flex-col items-center relative justify-center w-1/4 ki">
-            <span class="text-[20px] absolute top-0">minutes</span>
+            <span class="lg:text-[20px] text-[17px] absolute lg:top-0 -top-4">minutes</span>
             <div class="flex">
-                <h1 class="text-[150px] text-semi  text-center mx-auto">{{minutes}}</h1>
-                <!-- <h1 class="text-[150px]">:</h1> -->
+                <h1 class="lg:text-[150px] text-[60px] text-semi  text-center mx-auto">{{minutes}}</h1>
+                <!-- <h1 class="lg:text-[150px] text-[80px]">:</h1> -->
             </div>
         </div>
-        <div class="flex flex-col items-center relative justify-center w-1/4">
+        <div class="lg:flex hidden flex-col items-center relative justify-center w-1/4">
             <span class="text-[20px] absolute top-0">seconds</span>
             <div class="flex">
-                <h1 class="text-[150px] text-semi  text-center mx-auto">{{seconds}}</h1>
-                <!-- <h1 class="text-[150px]">:</h1> -->
+                <h1 class="lg:text-[150px] text-[80px] text-semi  text-center mx-auto">{{seconds}}</h1>
+                <!-- <h1 class="lg:text-[150px] text-[80px]">:</h1> -->
             </div>
         </div>
     </div>
@@ -98,10 +98,18 @@ export default {
 .ki {
     position: relative;
 }
-.ki::after {
+@media (min-width: 1024px) {
+  .ki::after {
+      content: ':';
+      position: absolute;
+      font-size: 150px;
+      right: -85px
+  }
+}
+.ki:nth-child(1)::after,.ki:nth-child(2)::after {
     content: ':';
     position: absolute;
-    font-size: 150px;
-    right: -85px
+    font-size: 60px;
+    right: -45px
 }
 </style>

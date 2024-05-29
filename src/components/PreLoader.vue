@@ -13,11 +13,11 @@
         </div>
     </div>
     <div class="premediate">
-      <div class="w-full h-[196px] bg-red-200 fixed top-0 z-10 opacity-0 top-gradient" style="background: #3E1821;backdrop-filter: blur(2px);"> 
+      <div class="w-full lg:h-[196px] h-[106px] bg-red-200 fixed top-0 z-10 opacity-0 top-gradient" style="background: #3E1821;backdrop-filter: blur(2px);"> 
 
       </div>
-      <div class="menu opacity-0 fixed bottom-10 left-[45px]"> 
-        <ul class="flex flex-col gap-[13.31px]" :class="(currentSection == 'adrie') ? 'hidymate': 'hidynon'"> 
+      <div class="menu opacity-0 fixed bottom-0 left-0 z-20 lg:bottom-10 lg:left-[45px]"> 
+        <ul class="lg:flex hidden flex-col gap-[13.31px]" :class="(currentSection == 'adrie') ? 'hidymate': 'hidynon'"> 
           <li class="flex gap-[15.53px] items-center"> 
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
              <path v-if="currentSection == 'home'" d="M1.00119 18.4632C9.37238 20.1284 15.9589 26.5241 17.7776 34.7471C17.8176 34.9152 17.9346 35.0451 18.0914 35.1045C18.1508 35.127 18.209 35.1368 18.2768 35.138C18.5134 35.1358 18.7207 34.9697 18.7679 34.7368C20.4534 26.483 26.9369 19.9908 35.2755 18.2007C35.5124 18.1497 35.6719 17.9471 35.6717 17.7085C35.6694 17.4753 35.5008 17.2708 35.2646 17.2242C26.8934 15.5589 20.307 9.16328 18.4882 0.940244C18.4344 0.711931 18.233 0.543954 17.989 0.549401C17.7525 0.551565 17.5451 0.717691 17.498 0.950563C15.8124 9.20439 9.331 15.6912 0.990346 17.4867C0.753419 17.5377 0.593955 17.7402 0.594168 17.9788C0.596455 18.2121 0.767082 18.4112 1.00119 18.4632Z" fill="#E5EEB9"/>
@@ -54,6 +54,43 @@
             <span :class="(currentSection == 'contact') ? 'hidynon': 'hidymate'">Contact</span>
           </li>
         </ul>
+        <ul style="opacity: 0.9;background: var(--Plum, #3E1821);backdrop-filter: blur(2px);" class="lg:hidden items-center justify-center flex flex-row gap-[8px] bg-red-200 w-screen h-[112px] left-0 relative" :class="(currentSection == 'adrie') ? 'hidymate': 'hidynon'">
+          <li class="flex flex-col gap-[15.53px] relative items-center"> 
+            <span class="text-[17px] absolute -top-8 left-[150%]" :class="(currentSection == 'home') ? 'hidynon': 'hidymate'">Prelude</span>
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path v-if="currentSection == 'home'" d="M12.9149 24.2439C14.0285 18.7214 18.3055 14.3763 23.8046 13.1765C23.917 13.15 24.0039 13.0729 24.0436 12.9695C24.0587 12.9302 24.0652 12.8918 24.066 12.8471C24.0646 12.6911 23.9535 12.5543 23.7977 12.5232C18.278 11.4112 13.9365 7.13402 12.7393 1.63301C12.7052 1.47671 12.5698 1.37151 12.4102 1.37165C12.2542 1.37316 12.1175 1.48435 12.0863 1.64016C10.9727 7.16268 6.69562 11.5078 1.19653 12.7076C1.04385 12.7432 0.931516 12.876 0.935159 13.037C0.936606 13.193 1.0477 13.3298 1.20343 13.3609C6.72312 14.4729 11.0611 18.7487 12.2619 24.2511C12.2959 24.4074 12.4314 24.5126 12.591 24.5125C12.747 24.511 12.8801 24.3984 12.9149 24.2439Z" fill="#E5EEB9" stroke="#E7EEBE"/>
+              <path v-else  d="M12.4769 24.2439C13.5905 18.7214 17.8676 14.3763 23.3667 13.1765C23.479 13.15 23.5659 13.0729 23.6056 12.9695C23.6207 12.9302 23.6272 12.8918 23.628 12.8471C23.6266 12.6911 23.5155 12.5543 23.3597 12.5232C17.8401 11.4112 13.4985 7.13402 12.3013 1.63301C12.2673 1.47671 12.1318 1.37151 11.9722 1.37165C11.8162 1.37316 11.6795 1.48435 11.6483 1.64016C10.5347 7.16268 6.25764 11.5078 0.758544 12.7076C0.605861 12.7432 0.493528 12.876 0.497171 13.037C0.498618 13.193 0.609713 13.3298 0.765445 13.3609C6.28513 14.4729 10.6232 18.7487 11.8239 24.2511C11.8579 24.4074 11.9934 24.5126 12.153 24.5125C12.309 24.511 12.4421 24.3984 12.4769 24.2439Z" stroke="#E7EEBE"/>
+            </svg>
+          </li>
+          <li class="flex flex-col relative gap-[15.53px] items-center"> 
+            <span class="text-[17px] absolute -top-8 left-[10%]" :class="(currentSection == 'backstage') ? 'hidynon': 'hidymate'">Backstage</span>
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path v-if="currentSection == 'backstage'" d="M12.9149 24.2439C14.0285 18.7214 18.3055 14.3763 23.8046 13.1765C23.917 13.15 24.0039 13.0729 24.0436 12.9695C24.0587 12.9302 24.0652 12.8918 24.066 12.8471C24.0646 12.6911 23.9535 12.5543 23.7977 12.5232C18.278 11.4112 13.9365 7.13402 12.7393 1.63301C12.7052 1.47671 12.5698 1.37151 12.4102 1.37165C12.2542 1.37316 12.1175 1.48435 12.0863 1.64016C10.9727 7.16268 6.69562 11.5078 1.19653 12.7076C1.04385 12.7432 0.931516 12.876 0.935159 13.037C0.936606 13.193 1.0477 13.3298 1.20343 13.3609C6.72312 14.4729 11.0611 18.7487 12.2619 24.2511C12.2959 24.4074 12.4314 24.5126 12.591 24.5125C12.747 24.511 12.8801 24.3984 12.9149 24.2439Z" fill="#E5EEB9" stroke="#E7EEBE"/>
+              <path v-else  d="M12.4769 24.2439C13.5905 18.7214 17.8676 14.3763 23.3667 13.1765C23.479 13.15 23.5659 13.0729 23.6056 12.9695C23.6207 12.9302 23.6272 12.8918 23.628 12.8471C23.6266 12.6911 23.5155 12.5543 23.3597 12.5232C17.8401 11.4112 13.4985 7.13402 12.3013 1.63301C12.2673 1.47671 12.1318 1.37151 11.9722 1.37165C11.8162 1.37316 11.6795 1.48435 11.6483 1.64016C10.5347 7.16268 6.25764 11.5078 0.758544 12.7076C0.605861 12.7432 0.493528 12.876 0.497171 13.037C0.498618 13.193 0.609713 13.3298 0.765445 13.3609C6.28513 14.4729 10.6232 18.7487 11.8239 24.2511C11.8579 24.4074 11.9934 24.5126 12.153 24.5125C12.309 24.511 12.4421 24.3984 12.4769 24.2439Z" stroke="#E7EEBE"/>
+            </svg>
+          </li>
+          <li class="flex flex-col gap-[15.53px] relative items-center"> 
+            <span class="text-[17px] absolute -top-8 left-[10%]" :class="(currentSection == 'faq') ? 'hidynon': 'hidymate'">FAQ</span>
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path v-if="currentSection == 'faq'" d="M12.9149 24.2439C14.0285 18.7214 18.3055 14.3763 23.8046 13.1765C23.917 13.15 24.0039 13.0729 24.0436 12.9695C24.0587 12.9302 24.0652 12.8918 24.066 12.8471C24.0646 12.6911 23.9535 12.5543 23.7977 12.5232C18.278 11.4112 13.9365 7.13402 12.7393 1.63301C12.7052 1.47671 12.5698 1.37151 12.4102 1.37165C12.2542 1.37316 12.1175 1.48435 12.0863 1.64016C10.9727 7.16268 6.69562 11.5078 1.19653 12.7076C1.04385 12.7432 0.931516 12.876 0.935159 13.037C0.936606 13.193 1.0477 13.3298 1.20343 13.3609C6.72312 14.4729 11.0611 18.7487 12.2619 24.2511C12.2959 24.4074 12.4314 24.5126 12.591 24.5125C12.747 24.511 12.8801 24.3984 12.9149 24.2439Z" fill="#E5EEB9" stroke="#E7EEBE"/>
+              <path v-else  d="M12.4769 24.2439C13.5905 18.7214 17.8676 14.3763 23.3667 13.1765C23.479 13.15 23.5659 13.0729 23.6056 12.9695C23.6207 12.9302 23.6272 12.8918 23.628 12.8471C23.6266 12.6911 23.5155 12.5543 23.3597 12.5232C17.8401 11.4112 13.4985 7.13402 12.3013 1.63301C12.2673 1.47671 12.1318 1.37151 11.9722 1.37165C11.8162 1.37316 11.6795 1.48435 11.6483 1.64016C10.5347 7.16268 6.25764 11.5078 0.758544 12.7076C0.605861 12.7432 0.493528 12.876 0.497171 13.037C0.498618 13.193 0.609713 13.3298 0.765445 13.3609C6.28513 14.4729 10.6232 18.7487 11.8239 24.2511C11.8579 24.4074 11.9934 24.5126 12.153 24.5125C12.309 24.511 12.4421 24.3984 12.4769 24.2439Z" stroke="#E7EEBE"/>
+            </svg>
+          </li>
+          <li class="flex flex-col gap-[15.53px] relative items-center"> 
+            <span class="text-[17px] absolute -top-8 -left-[190%]" :class="(currentSection == 'share') ? 'hidynon': 'hidymate'">Share</span>
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path v-if="currentSection == 'share'" d="M12.9149 24.2439C14.0285 18.7214 18.3055 14.3763 23.8046 13.1765C23.917 13.15 24.0039 13.0729 24.0436 12.9695C24.0587 12.9302 24.0652 12.8918 24.066 12.8471C24.0646 12.6911 23.9535 12.5543 23.7977 12.5232C18.278 11.4112 13.9365 7.13402 12.7393 1.63301C12.7052 1.47671 12.5698 1.37151 12.4102 1.37165C12.2542 1.37316 12.1175 1.48435 12.0863 1.64016C10.9727 7.16268 6.69562 11.5078 1.19653 12.7076C1.04385 12.7432 0.931516 12.876 0.935159 13.037C0.936606 13.193 1.0477 13.3298 1.20343 13.3609C6.72312 14.4729 11.0611 18.7487 12.2619 24.2511C12.2959 24.4074 12.4314 24.5126 12.591 24.5125C12.747 24.511 12.8801 24.3984 12.9149 24.2439Z" fill="#E5EEB9" stroke="#E7EEBE"/>
+              <path v-else  d="M12.4769 24.2439C13.5905 18.7214 17.8676 14.3763 23.3667 13.1765C23.479 13.15 23.5659 13.0729 23.6056 12.9695C23.6207 12.9302 23.6272 12.8918 23.628 12.8471C23.6266 12.6911 23.5155 12.5543 23.3597 12.5232C17.8401 11.4112 13.4985 7.13402 12.3013 1.63301C12.2673 1.47671 12.1318 1.37151 11.9722 1.37165C11.8162 1.37316 11.6795 1.48435 11.6483 1.64016C10.5347 7.16268 6.25764 11.5078 0.758544 12.7076C0.605861 12.7432 0.493528 12.876 0.497171 13.037C0.498618 13.193 0.609713 13.3298 0.765445 13.3609C6.28513 14.4729 10.6232 18.7487 11.8239 24.2511C11.8579 24.4074 11.9934 24.5126 12.153 24.5125C12.309 24.511 12.4421 24.3984 12.4769 24.2439Z" stroke="#E7EEBE"/>
+            </svg>
+          </li>
+          <li class="flex flex-col gap-[15.53px] relative items-center"> 
+            <span class="text-[17px] absolute -top-8 left-[10%]" :class="(currentSection == 'contact') ? 'hidynon': 'hidymate'">Contact</span>
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path v-if="currentSection == 'contact'" d="M12.9149 24.2439C14.0285 18.7214 18.3055 14.3763 23.8046 13.1765C23.917 13.15 24.0039 13.0729 24.0436 12.9695C24.0587 12.9302 24.0652 12.8918 24.066 12.8471C24.0646 12.6911 23.9535 12.5543 23.7977 12.5232C18.278 11.4112 13.9365 7.13402 12.7393 1.63301C12.7052 1.47671 12.5698 1.37151 12.4102 1.37165C12.2542 1.37316 12.1175 1.48435 12.0863 1.64016C10.9727 7.16268 6.69562 11.5078 1.19653 12.7076C1.04385 12.7432 0.931516 12.876 0.935159 13.037C0.936606 13.193 1.0477 13.3298 1.20343 13.3609C6.72312 14.4729 11.0611 18.7487 12.2619 24.2511C12.2959 24.4074 12.4314 24.5126 12.591 24.5125C12.747 24.511 12.8801 24.3984 12.9149 24.2439Z" fill="#E5EEB9" stroke="#E7EEBE"/>
+              <path v-else  d="M12.4769 24.2439C13.5905 18.7214 17.8676 14.3763 23.3667 13.1765C23.479 13.15 23.5659 13.0729 23.6056 12.9695C23.6207 12.9302 23.6272 12.8918 23.628 12.8471C23.6266 12.6911 23.5155 12.5543 23.3597 12.5232C17.8401 11.4112 13.4985 7.13402 12.3013 1.63301C12.2673 1.47671 12.1318 1.37151 11.9722 1.37165C11.8162 1.37316 11.6795 1.48435 11.6483 1.64016C10.5347 7.16268 6.25764 11.5078 0.758544 12.7076C0.605861 12.7432 0.493528 12.876 0.497171 13.037C0.498618 13.193 0.609713 13.3298 0.765445 13.3609C6.28513 14.4729 10.6232 18.7487 11.8239 24.2511C11.8579 24.4074 11.9934 24.5126 12.153 24.5125C12.309 24.511 12.4421 24.3984 12.4769 24.2439Z" stroke="#E7EEBE"/>
+            </svg>
+          </li>
+        </ul>
       </div>
       <div class="containerr h-[50vh]">
       </div>
@@ -64,8 +101,8 @@
               <img src="@/assets/images/appmock.png" />
             </div>
             <div class="flex flex-col gap-[70px]"> 
-              <h1 class="text-[80px] text-semi w-3/6 text-center mx-auto leading-[80px]">Learn your lines in a heartbeat with the help of an AI</h1>
-              <div class="flex w-1/2 mx-auto text-center flex-col text-[20px] gap-[20px]"> 
+              <h1 class="lg:text-[80px] text-[45px] text-semi lg:w-3/6 text-center mx-auto lg:leading-[80px] leading-[49.5px]">Learn your lines in a heartbeat with the help of an AI</h1>
+              <div class="flex lg:w-1/2 lg:p-0 p-2 mx-auto text-center flex-col lg:lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px] text-[17px] lg:leading-[26px] leading-[22.1px] gap-[20px]"> 
                 <h6>Are you a student at a theater? Do you struggle trying to remember your lines? Do you need a buddy to practice lines with you? Do you want to be even better at your lines and acting? </h6>
                 <h6>You are lucky, AI is here to help you! </h6>
                 <h6>It’s time to work on the emotion and actions, leave the lines to us. We will be your buddy and help you practice your lines with you.</h6>
@@ -98,23 +135,23 @@
             </div>
           </div>
           <div class="flex flex-col gap-[70px] section" id="backstage"> 
-            <h1 class="text-[80px] text-semi w-3/6 text-center mx-auto leading-[80px]">As simple as an app</h1>
+            <h1 class="lg:text-[80px] text-[45px] text-semi w-3/6 text-center mx-auto lg:leading-[80px] leading-[49.5px]">As simple as an app</h1>
             <div class="flex items-center justify-center"> 
-              <img src="@/assets/images/BB_animation.gif" class="w-2/3"/>
+              <img src="@/assets/images/BB_animation.gif" class="lg:w-2/3"/>
             </div>
-            <div class="flex w-1/2 mx-auto text-center flex-col text-[20px] gap-[20px]"> 
+            <div class="flex lg:w-1/2 lg:p-0 p-2 mx-auto text-center flex-col lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px] gap-[20px]"> 
               <h6>With our user-friendly script management page, you can effortlessly read, edit, and configure voice settings for your script. Whether it's adjusting the pacing or selecting character voices, we've got you covered. Once your script is ready, simply hit the rehearse option and let our AI guide you through your lines. Focus on perfecting your emotions and actions while we take care of line memorization. Say goodbye to the stress of forgetting lines and hello to confident performances!</h6>
             </div>
           </div>
           <div class="flex flex-col gap-[70px] section" id="faq"> 
-            <h1 class="text-[80px] text-semi w-full text-center mx-auto leading-[80px]">Frequently Asked Questions</h1>
+            <h1 class="lg:text-[80px] text-[45px] text-semi w-full text-center mx-auto lg:leading-[80px] leading-[49.5px]">Frequently Asked Questions</h1>
             
             <div>
-              <div v-for="(faq, index) in faqs" class="" :key="index">
-                <div @click="toggle(index)" class="cursor-pointer pt-[35px] pb-[26px] flex flex-row justify-between items-center border-t border-nano-light">
-                  <div class="flex items-center gap-[75px]">
-                    <h2 class="text-[40px] text-semi">{{index+1}}</h2>
-                    <div class="text-[20px]">{{ faq.question }}</div>
+              <div v-for="(faq, index) in faqs" class="lg:pl-0 lg:pr-0 pl-[31px] pr-[31px]" :key="index">
+                <div @click="toggle(index)" class="cursor-pointer  lg:pt-[35px] lg:pb-[26px] pt-4 pb-4 flex flex-row justify-between items-center border-t border-nano-light">
+                  <div class="flex items-center lg:gap-[75px] gap-[19px]">
+                    <h2 class="lg:text-[40px] text-[30px] text-semi">{{index+1}}</h2>
+                    <div class="lg:text-[20px]  lg:leading-[26px] leading-[22.5px]  text-[17px]">{{ faq.question }}</div>
                   </div>
                   <div> 
                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +161,7 @@
                   </div>
                 </div>
                 <transition as="div" name="slide">
-                  <div v-if="faq.show" class="bg-gray-800 p-4 flex flex-wrap whitespace-pre rounded mt-2">
+                  <div v-if="faq.show" class="bg-gray-800 whitespace-pre-line p-4 flex flex-shrink-0 rounded mt-2">
                     {{ faq.answer }}
                   </div>
                 </transition>
@@ -133,13 +170,13 @@
           </div>
           <div class="flex flex-col gap-[70px] mt-24 section" id="share"> 
             <CountDown />
-            <div class="flex mx-auto text-center flex-col text-[20px] gap-[1px]"> 
-              <h1 class="text-[80px] text-semi leading-[80px]">We are getting ready.</h1>
-              <h1 class="text-[80px] mx-auto w-3/5 text-semi leading-[80px]">Meanwhile, share it with your loved ones!</h1>
+            <div class="flex mx-auto text-center flex-col lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px] gap-[1px]"> 
+              <h1 class="lg:text-[80px] text-[45px] text-semi lg:leading-[80px] leading-[49.5px]">We are getting ready.</h1>
+              <h1 class="lg:text-[80px] text-[45px] mx-auto lg:w-3/5 text-semi lg:leading-[80px] leading-[49.5px]">Meanwhile, share it with your loved ones!</h1>
             </div>
             <div class="flex flex-col gap-[31px] items-center"> 
               <h5 class="text-semi text-[30px]">SPREAD THE WORD!</h5>
-              <div class="flex flex-wrap gap-[42px] items-center"> 
+              <div class="flex flex-wrap lg:gap-[42px] gap-[20px] items-center"> 
                 <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5803 0C6.80267 0 0 6.39656 0 15.0355C0 19.5546 1.86211 23.4593 4.89353 26.157C5.14746 26.3846 5.30107 26.6996 5.31361 27.0396L5.39825 29.7966C5.42646 30.676 6.33871 31.2468 7.14751 30.8944L10.2385 29.5377C10.5018 29.4223 10.7934 29.4005 11.0692 29.4753C12.4893 29.8652 14.0035 30.071 15.5803 30.071C24.358 30.071 31.1606 23.6744 31.1606 15.0355C31.1606 6.39656 24.358 0 15.5803 0Z" fill="#E7EEBE"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M6.2249 19.5863L10.8022 12.3734C11.5296 11.2273 13.0909 10.9408 14.1819 11.7536L17.8218 14.4663C18.1573 14.7154 18.615 14.7123 18.9474 14.4631L23.8633 10.757C24.5185 10.2618 25.3776 11.0435 24.9355 11.7349L20.3613 18.9448C19.634 20.0909 18.0726 20.3774 16.9816 19.5645L13.3417 16.8519C13.0062 16.6027 12.5485 16.6058 12.2162 16.855L7.29713 20.5642C6.64188 21.0594 5.78285 20.2777 6.2249 19.5863Z" fill="#3E1821"/>
@@ -175,26 +212,26 @@
           </div>
           <div class="mt-24" id="contact">
             <div class="flex flex-col gap-[70px]"> 
-              <h1 class="text-[80px] text-semi w-3/6 text-center mx-auto leading-[80px]">We would love to hear from you</h1>
-              <div class="flex w-1/2 mx-auto text-center flex-col text-[20px] gap-[20px]"> 
+              <h1 class="lg:text-[80px] text-[45px] text-semi lg:w-3/6 text-center mx-auto lg:leading-[80px] leading-[49.5px]">We would love to hear from you</h1>
+              <div class="flex lg:w-1/2 mx-auto text-center flex-col lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px] gap-[20px]"> 
                 <h6>Whether you are interested in the project or you have used the app and would like to give us some feedback, we are here to listen!</h6>
               </div>
             </div>
             <div class="bg-nano-light mt-[58px] pt-[84px] pb-[58px] flex flex-col items-center justify-center text-nano-dark"> 
               <div class="flex flex-col items-center gap-[20px]"> 
-                <a class="text-[20px]">hello@backstagebuddy.com</a>
+                <a class="lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px]">hello@backstagebuddy.com</a>
 
                 <ul> 
-                  <li class="underline text-[20px]">Instagram</li>
-                  <li class="underline text-[20px]">LinkedIn</li>
-                  <li class="underline text-[20px]">Facebook</li>
+                  <li class="underline lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px]">Instagram</li>
+                  <li class="underline lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px]">LinkedIn</li>
+                  <li class="underline lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px]">Facebook</li>
                 </ul>
 
                 <a class="underline">Privacy Policy</a>
 
                 <div class="flex flex-col items-center justify-center">
-                  <a class="text-[20px]">&copy Backstage Buddy 2024</a>
-                  <span class="text-[20px]">Backstage Buddy is a Nanonebula product</span>
+                  <a class="lg:text-[20px] lg:leading-[26px] leading-[22.5px]  text-[17px]">&copy Backstage Buddy 2024</a>
+                  <span class="lg:text-[20px] lg:leading-[26px] leading-[22.5px] text-center  text-[17px]">Backstage Buddy is a Nanonebula product</span>
                 </div>
               </div>
             </div>
@@ -383,10 +420,15 @@ export default {
 .logoo {
   position: fixed;
   top:39px;
-  width: 15%;
+  width: 20%;
   height: auto;
   left:50%;
   transform:translateX(-50%);
+}
+@media only screen and (min-device-width: 480px){
+  .logoo {
+    width: 15% !important;
+  }
 }
 
 .containerr, .containerr-2 {
